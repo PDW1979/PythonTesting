@@ -21,9 +21,8 @@ To get getpass() to work:
 2. 'Edit Configurations'
 3. Check 'Emulate terminal in output console'
 4. Apply
-!!! THIS SCRIPT REQUIRES PYTHON 3.8+ !!!
-Phillip Ward
 
+!!! THIS SCRIPT REQUIRES PYTHON 3.8+ !!!
 """
 
 
