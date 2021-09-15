@@ -15,26 +15,7 @@ net_connect.disconnect() - Close the connection
 net_connect.write_channel() - Low-level write of the channel
 net_connect.read_channel() - Low-level write of the channel
 
-
-To get getpass() to work:
-1. 'Run'
-2. 'Edit Configurations'
-3. Check 'Emulate terminal in output console'
-4. Apply
-
-!!! THIS SCRIPT REQUIRES PYTHON 3.8+ !!!
 """
-
-
-
-
-
-
-
-
-
-
-
 
 
 
