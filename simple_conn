@@ -1,0 +1,59 @@
+"""
+NETMIKO COMMONLY-USED METHODS
+net_connect.send_command() - Send command down the channel, return output back (pattern based)
+    !!! net_connect.send_command('show arp', expect_string=r'#') !!!
+    !!! This will print the output of show arp until it comes to the string '#' !!!
+net_connect.send_command_timing() - Send command down the channel, return output back (timing based)
+net_connect.send_config_set() - Send configuration commands to remote device
+net_connect.send_config_from_file() - Send configuration commands loaded from a file
+net_connect.save_config() - Save the running-config to the startup-config
+net_connect.enable() - Enter enable mode
+        !!! If you pass the 'secret' variable in your device dictionary, it will automatically get to enable and paste your enable secret !!!
+net_connect.find_prompt() - Return the current router prompt
+net_connect.commit() - Execute a commit action on Juniper and IOS-XR
+net_connect.disconnect() - Close the connection
+net_connect.write_channel() - Low-level write of the channel
+net_connect.read_channel() - Low-level write of the channel
+
+
+To get getpass() to work:
+1. 'Run'
+2. 'Edit Configurations'
+3. Check 'Emulate terminal in output console'
+4. Apply
+!!! THIS SCRIPT REQUIRES PYTHON 3.8+ !!!
+Phillip Ward
+
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+from netmiko import Netmiko
+import getpass
+
+host = input ("Enter Host IP :")
+username = getpass.getuser()
+userPassword = getpass.getpass()
+
+my_device = {
+  'host': host,
+  'username': username,
+  'password': userPassword,
+  'device_type':'cisco_ios',
+}
+
+net_conn = Netmiko(**my_device)
+output = net_conn.send_command("show arp")
+print(output)
+
